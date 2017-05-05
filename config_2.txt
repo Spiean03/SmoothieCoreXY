@@ -6,9 +6,9 @@ mm_per_line_segment                          5                # Lines can be cut
 
 # Arm solution configuration : corexy robot. Translates mm positions into stepper positions
 arm_solution				     corexy	      # corexy 
-alpha_steps_per_mm                           94.139704        # Steps per mm for alpha stepper
-beta_steps_per_mm                            94.139704        # Steps per mm for beta stepper
-gamma_steps_per_mm                           400              # Steps per mm for gamma stepper
+alpha_steps_per_mm                           160        # Steps per mm for alpha stepper, 160 for 1/32, 80 for 1/16
+beta_steps_per_mm                            160        # Steps per mm for beta stepper, 160 for 1/32, 80 for 1/16
+gamma_steps_per_mm                           3200.00             # Steps per mm for gamma stepper, 3200 for 1/32, 1600 for 1/16
 
 # Planner module configuration : Look-ahead and acceleration configuration
 planner_queue_size                           32               # Size of the planning queue, must be a power of 2. 128 seems to be the maximum.
