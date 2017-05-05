@@ -1,4 +1,4 @@
-# Smoothieboard configuration file, see http://smoothieware.org/configuring-smoothie
+# Smoothieboard configuration file, for Smoothieboard
 # NOTE Lines must not exceed 132 characters, and '#' characters mean what follows is ignored
 ## Robot module configurations : general handling of movement G-codes and slicing into moves
 
@@ -55,7 +55,7 @@ gamma_max_rate                               300.0            # Maximum rate in 
 extruder.hotend.enable                          true          # Whether to activate the extruder module at all. All configuration is ignored if false
 extruder.hotend.steps_per_mm                    140           # Steps per mm for extruder stepper
 extruder.hotend.default_feed_rate               600           # Default rate ( mm/minute ) for moves where only the extruder moves
-extruder.hotend.acceleration                    500           # Acceleration for the stepper motor mm/sec²
+extruder.hotend.acceleration                    500           # Acceleration for the stepper motor mm/secÂ²
 extruder.hotend.max_speed                       50            # Maximum speed in mm/s
 
 extruder.hotend.step_pin                        2.3           # Pin for extruder step signal
@@ -128,7 +128,7 @@ temperature_control.hotend.designator        T                # Designator lette
 # See http://smoothieware.org/temperaturecontrol#runaway
 #temperature_control.hotend.runaway_heating_timeout      900  # How long it can take to heat up, max is 2040 seconds.
 #temperature_control.hotend.runaway_cooling_timeout        0  # How long it can take to cool down if temp is set lower, max is 2040 seconds
-#temperature_control.hotend.runaway_range                20   # How far from the set temperature it can wander, max setting is 63°C
+#temperature_control.hotend.runaway_range                20   # How far from the set temperature it can wander, max setting is 63Â°C
 
 # PID configuration 
 # See http://smoothieware.org/temperaturecontrol#pid
