@@ -53,9 +53,10 @@ raster = nb.resize((im.size[0], nlines), Image.ANTIALIAS)
 #print(nlines)
 
 
-gcode="G92 X0 Y0 Z0\n"
-gcode +="G0 Z"+str(Zoffset)+"\n"
-gcode += "M10\n"
+#gcode="G92 X0 Y0 Z0\n" #set actual position as X=0 and Y=0 
+gcode ="G28 X Y\n" #Home the X and Y axes; move to 0,0
+gcode +="G0 Z"+str(Zoffset)+"\n" #Rapid move to Z-offset position
+#gcode += "M10\n" #Vacuum on (in case you have vacuum/filter to remove smoke)
 
 power=-1
 gcodelines=0
@@ -83,14 +84,14 @@ for y in range(nlines-1):
 			power=newpower			
 	direction=-direction
 	
-gcode += "M11\n" 
-gcode +="G0 XO Y0 Z0\n"
+#gcode += "M11\n" #Vacuum off 
+#gcode +="G0 XO Y0 Z0\n"
+gcode +="G28 X Y\n" #After job completed, move to X,Y home
 
 
 '''
 Print GCode, write and save file
 '''
-
 print "The GCode has %s lines" %gcodelines
 
 #witting file
